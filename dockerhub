@@ -1,0 +1,18 @@
+name:devops application
+
+on:
+push:
+branches: [ master ]
+pull_request:
+branches: [ master ]
+
+jobs:
+build:
+
+Steps: actions/checkout@v1
+- name: Build & push image
+run: |
+echo "$({ secrets.DOCKERPW))" | docker login -u "webmagic1]" --password -stdin
+docker image build -t webmagic1/flaskapp:v1
+docker push webmagic/flaskapp:v1s:
+- u
