@@ -1,0 +1,3 @@
+checkout scmGit(
+branches: [[ name: 'master']],
+userremoteconfigs: [[URL: 'https:// github.com/jenkinsci/git-
